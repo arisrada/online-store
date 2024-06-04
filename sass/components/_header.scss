@@ -1,0 +1,65 @@
+@use '../components/mixins' as *;
+@use '../components/colors' as *;
+
+header{
+    display: flex;
+    flex-direction: row;
+    padding:20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    background-color: $theme-color;
+    top: 0;
+    position: fixed;
+    transition: top 8s;
+    z-index: 10000;
+    box-shadow: 1px 1px rgb(216, 213, 213);
+    .menu-bar{
+        svg{
+            display: none;
+        }
+    }
+    .nav-icon{
+        display: block;
+    }
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    // width: 50%;
+    list-style-type: none;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 500;
+        padding: 2px;
+        position: relative;
+    }
+    li{
+        padding: 5px;
+    }
+    .active span{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background: $primary-color;
+        transition:all 0.6s;
+    }
+    .active:hover span{
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+.nav-button{
+    @include button;
+    background-color: $primary-color;
+    color: $primary-text-color;
+}

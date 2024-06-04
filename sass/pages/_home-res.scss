@@ -1,0 +1,125 @@
+@use '../components/colors' as *;
+@use '../components/mixins' as *;
+
+@media only screen and (max-width: 990px){
+    .home1{
+        gap: 20px;
+        padding-top: 200px;
+        padding-bottom: 50px;
+        .text{
+            width: 60%;
+            h1{
+                width: 100%;
+            }
+        }
+        .img-div{
+            width: 40%;
+            .img1{
+                width: 90%;
+            }
+        }
+    }
+    .home2{
+        flex-direction: column;
+        justify-content: center;
+        .icon{
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .text{
+            margin-top: 50px;
+            h3{
+                color: $primary-text-color;
+                font-size: 15px;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .home3{
+        .cards{
+            justify-content: space-around;
+            gap:20px;
+            padding:0px;
+            .card{
+                @include card1-res2;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+    .home1{
+        width: 100%;
+        padding:20px;
+        padding-bottom: 50px;
+        padding-top: 100px;
+        gap: 0;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        .text{
+            width: 100%;
+            h1{
+                margin-top: 30px;
+                font-size: 30px;
+                line-height: 40px;
+                margin-bottom: 10px;
+            }
+            h3{
+                font-size: 15px;
+                font-weight: 500;
+                }
+                .home-btn{
+                    @include button-res;
+                }
+                a{
+                    font-size: 12px;
+                }
+        }
+        .img-div{
+            .img1{
+                display: none;
+            }
+        }
+    }
+    
+    .home3{
+        width: 100%;
+        padding: 40px 0;
+        h1{
+            font-size: 27px;
+            padding: 40px;
+            color: $primary-color;
+            margin-bottom: 0px;
+            width: auto;
+        }
+        .cards{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+            padding:30px;
+            .card{
+                @include card1-res1;
+                h2{
+                    font-size:23px ;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                    margin-top: 30px;
+                }
+                h3{
+                    font-size:20px ;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+
+

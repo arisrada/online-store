@@ -1,0 +1,156 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-main{
+        background-color: $primary-color;
+        position: absolute;
+        z-index: -10;
+        margin-top: 1000px;
+        padding:120px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $primary-text-color;
+        width: 100%;
+        text-align: center;
+        h1{
+            font-size: 40px;
+            width: 500px;
+        }
+        a{
+            @include button;
+            background-color: $primary-text-color;
+            color: $primary-color;
+            margin-top: 30px;
+        }
+        .cards{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 30px;
+            margin-bottom: 60px;
+            .card{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                img{
+                    width: 30px;
+                }
+                h3{
+                    font-size: 18px;
+                }
+            }
+        }
+        .copy{
+            display: flex;
+            flex-direction: row;
+            padding: 20px 80px;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 1000;
+            h3{
+                font-size: 12px;
+                font-weight: 400;
+                color: gray;
+            }
+            img{
+                width: 90px;
+            }
+        }
+    }
+    .footer-sub{
+        width: 80%;
+        background-color: $help-bg;
+        position: relative;
+        border-radius: 20px;
+        top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $help-button;
+        padding: 80px 40px;
+        .text{
+            width: 40%;
+            color: $help-button;
+            .support{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 20px;
+                img{
+                    width: 30px;
+                }
+                h5{
+                    font-size: 15px;
+                }
+            }
+            h1{
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+            h4{
+                margin-bottom: 80px;
+            }
+            a{
+                text-decoration: none;
+                background-color: $help-button;
+                @include button;
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+        .cons{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .con{
+                display: flex;
+                flex-direction: row;
+                background-color: $primary-text-color;
+                gap: 40px;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 350px;
+                padding: 0px 30px;
+                border-radius: 20px;
+                height: 80px;
+                margin-bottom: 20px;
+                img{
+                    width: 40px;
+                }
+                h4{
+                    width: 200px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $primary-text-color;
+                    background-color: $help-button;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: block;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 4px 10px;
+                    text-align: center;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+

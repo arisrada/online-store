@@ -1,0 +1,42 @@
+/* universal */
+@use './components/universal' as *;
+
+/* component.... header */
+@use './components/header' as *;
+@use './components/header-res' as *;
+
+/* component.... footer */
+@use './components/footer' as *;
+@use './components/footer-res' as *;
+
+/* pages.... home */
+@use './pages/home' as *;
+@use './pages/home-res' as *;
+
+/* pages.... demos */
+@use './pages/demos' as *;
+@use './pages/demos-res' as *;
+
+/* pages.... mobile-first */
+@use './pages/mobile-first' as *;
+@use './pages/mobile-first-res' as *;
+
+/* pages.... features */
+@use './pages/features' as *;
+@use './pages/features-res' as *;
+
+/* pages.... multi-vendors */
+@use './pages/multi-vendor' as *;
+@use './pages/multi-vendor-res' as *;
+
+/* pages.... and */
+@use './pages/and' as *;
+@use './pages/and-res' as *;
+
+/* pages.... plugins */
+@use './pages/plugins' as *;
+@use './pages/plugins-res' as *;
+
+/* pages.... questions */
+@use './pages/questions' as *;
+@use './pages/questions-res' as *;
